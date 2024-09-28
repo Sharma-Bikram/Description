@@ -107,6 +107,7 @@ header .top{
 
 
 
+
 /* login form */ 
 
 
@@ -221,7 +222,17 @@ div.popup-container div.register button.register-btn{
     background-color: var(--green);
 }
 
+div.user{
+    color: var(--light-color);
+    background-color: var(--green);
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-weight: 500;
+}
 
+div.user a{
+    color: var(--white);
+}
 
 
 /*

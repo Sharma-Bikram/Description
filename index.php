@@ -1,3 +1,9 @@
+<?php
+    require('connection.php');
+    session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,12 +23,42 @@
                 <li>Phone: +9108888888</li>
                 <li>Email: info@gmail.com</li>
            
-            <button type="button"  onclick="popup('login-popup')">LOGIN</button>
-            <button type="button" onclick="popup('register-popup')">REGISTER</button>
             
+            
+            <?php
+             if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']==true)
+             {
+                
+                echo"
+                <li>
+                    <div class='user'>
+                        $_SESSION[username]-<a href='logout.php'>LOGOUT</a>
+                    </div>
+                </li>
+                ";
+                
+             }
+             else
+             {
+                echo"
+                <li>
+                    <div class='sign-in-up'>
+                    <button type='button'  onclick=\"popup('login-popup')\">LOGIN</button>
+                    <button type='button' onclick=\"popup('register-popup')\">REGISTER</button>
+                    </div>
+                </li>
+                ";
+             }
+
+
+        ?>
 
             </ul>
         </div>
+
+        
+
+
 
         <div class="popup-container" id="login-popup">
         <div class="popup">
@@ -438,6 +474,17 @@
 
         </div>
     </footer>
+
+<?php
+
+    if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']==true)
+    {
+        echo "<h1 style='text-align: center; margin-top: 200px; color: #fff'> welcome to the website . $_SESSION[username]    </h1>";
+    }
+
+?>
+
+
 
     <!--Coustom Js file link-->
     <script src="script.js"></script>
