@@ -197,7 +197,7 @@
                 </div>
                 <div class="header-btn">
                     <div class="header-hover">
-                        <a href="#">Donate</a>
+                        <a href="donation.php">Donate</a>
                     </div>
                 </div>
             </div>
