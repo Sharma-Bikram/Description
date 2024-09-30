@@ -440,7 +440,7 @@
                 <div class="title">Useful Links</div>
                 <ul>
                     <li>
-                        <a href="#homeSection">Home</a>
+                        <a href="#">Home</a>
                     </li>
                     <li>
                         <a href="#aboutSection">About us</a>

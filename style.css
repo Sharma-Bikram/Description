@@ -105,6 +105,9 @@ header .top{
     margin-left: 50%;
 }
 
+div.top ul li{
+    margin-left: 300px;
+}
 
 
 
@@ -232,6 +235,7 @@ div.user{
 
 div.user a{
     color: var(--white);
+    background-color: var(--blue);
 }
 
 
